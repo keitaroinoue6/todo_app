@@ -8,9 +8,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all'%>
     <%= javascript_pack_tag 'application'%>
+    <%= javascript_pack_tag 'index' %> 
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+
+<%# javascript_pack_tag 'index'とすることでapp/javascript/packs/index.jsxが呼ばれる %>
