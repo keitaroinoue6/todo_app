@@ -45,6 +45,7 @@ class Api: :V1::TodosController < ApplicationController
 
   private
   def todo_params
-    params.require(:todo).permit(:name, :is_completed)
+    params.require(:todo).permit(:name, :is_completed) 
   end
+  # nameカラムとis_completedの許可をpermitでしている
 end
