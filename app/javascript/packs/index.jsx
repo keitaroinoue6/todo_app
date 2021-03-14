@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom';
+//BrowserRouterというのをreact-router-domというところからインポートしている
 import App from '../components/App'
 
 document.addEventListener('DOMContentLoaded', () => {
