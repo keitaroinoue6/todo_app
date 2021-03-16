@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <BrowserRouter> 
       <App/>
     </BrowserRouter>,
-    document.querySelector('#root'),
+    document.querySelector('#root'),//idがrootという要素を取得してきて、Appコンポーネントを描画している
   );
 });
 
 //BrowserRouterでAppを囲っておるのでAppコンポーネントではreact-router-domのスイッチやリンクが使える
-//さらにAppの子要素のコンポーネントに対しても使える
+//さらにAppの子要素のコンポーネントに対してもリンクとかが使える
