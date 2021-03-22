@@ -60,16 +60,16 @@ function App() {
           </NavItem>
           <NavItem>
             <Link to="/todos/new">
-              Add New Todos
+              Add New Todo
             </Link>
           </NavItem>
         </NavItems>
       </Nabvar>
       <Wrapper>
         <Switch>
-          <Route exact path="/todos" component={TodoList}/>
-          <Route exact path="/todos/new" component={AddTodo}/>
-          <Route  path="/todos/:id/edit" component={EditTodo}/>
+          <Route exact path="/todos" component={TodoList} />
+          <Route exact path="/todos/new" component={AddTodo} />
+          <Route path="/todos/:id/edit" component={EditTodo} />
         </Switch>
       </Wrapper>
     </>

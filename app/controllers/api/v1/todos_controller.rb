@@ -1,7 +1,7 @@
-class Api: :V1::TodosController < ApplicationController
+class Api::V1::TodosController < ApplicationController
   def index
-    todos = Todo.order(update_at: :desc)
-    render ison: todos
+    todos = Todo.order(updated_at: :desc)
+    render json: todos
   end
 
   def show
@@ -31,7 +31,7 @@ class Api: :V1::TodosController < ApplicationController
     if Todo.destroy(params[:id])
       head :no_content
     else 
-      render json: { error: "Failed to destroy"}, status: 422
+      render json: { error: "Failed to destroy" }, status: 422
     end
   end
 
@@ -39,7 +39,7 @@ class Api: :V1::TodosController < ApplicationController
     if Todo.destroy_all
       head :no_content
     else
-      render json: { error: "Failed to destroy"}, status: 422
+      render json: { error: "Failed to destroy" }, status: 422
     end
   end
 
