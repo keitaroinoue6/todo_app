@@ -113,7 +113,7 @@ function EditTodo(props) {
   }
 
   const deleteTodo = () => {
-    const sure = window.confirm('Are you sure?')
+    const sure = window.confirm('Are you sure?') //ダイアログボックスの追加
     if (sure) {
       axios.delete(`/api/v1/todos/${currentTodo.id}`)
       .then(resp => {
