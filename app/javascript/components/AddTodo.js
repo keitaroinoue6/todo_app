@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react' //useStateを使うので追加
+import axios from 'axios' //HTPPS通信も行うので追加
 import styled from 'styled-components'
-import { toast } from 'react-toastify' 
-import 'react-toastify/dist/ReactToastify.css'
-import { FiSend } from 'react-icons/fi'
+import { toast } from 'react-toastify' //フラッシュメッセージ用
+import 'react-toastify/dist/ReactToastify.css' //フラッシュメッセージのcss用
+import { FiSend } from 'react-icons/fi' //送信ボタンをReacticonsから使用するため
 
 const InputAndButton = styled.div`
   display: flex;
