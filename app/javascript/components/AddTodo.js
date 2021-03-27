@@ -11,12 +11,13 @@ const InputAndButton = styled.div`
   margin-top: 20px;
 `
 
-const InputName = styled.input`
+const InputName = styled.input` 
   font-size: 20px;
   width: 100%;
   height: 40px;
   padding: 2px 7px;
 `
+//Todoを投稿する際のインプットタグになる
 
 const Button = styled.button`
   font-size: 20px;
