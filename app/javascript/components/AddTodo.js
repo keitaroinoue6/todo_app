@@ -22,7 +22,7 @@ const InputName = styled.input`
 const Button = styled.button`
   font-size: 20px;
   border: none;
-  border-radius: 3px;
+  border-radius: 3px; 
   margin-left: 10px;
   padding: 2px 10px;
   background: #1E90FF;
@@ -34,12 +34,15 @@ const Button = styled.button`
     cursor: default;
   `}
 `
+//ボタンの作成
+//border-radiusは角の丸める
 
 const Icon = styled.span`
   display: flex;
   align-items: center;
   margin: 0 7px;
 `
+//アイコンの設定
 
 toast.configure()
 
