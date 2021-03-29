@@ -49,11 +49,11 @@ toast.configure()
 function AddTodo(props) {
   const initialTodoState = {
     id: null,
-    name: "",
+    name: "",  //からの文字列
     is_completed: false
   };
 
-  const [todo, setTodo] = useState(initialTodoState);
+  const [todo, setTodo] = useState(initialTodoState); //初期値に先ほどのinitialTodoStateを記述
 
   const notify = () => {
     toast.success('Todo successfully created!', {
@@ -64,7 +64,7 @@ function AddTodo(props) {
   
   const handleInputChange = event => {
     const { name, value } = event.target;
-    setTodo({ ...todo, [name]: value });
+    setTodo({ ...todo, [name]: value }); //スプレッド構文で展開して、カラム名を指定して、そのvalueを更新する
   };
   const saveTodo = () => {
     var data = {
