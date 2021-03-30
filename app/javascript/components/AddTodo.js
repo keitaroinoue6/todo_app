@@ -63,7 +63,7 @@ function AddTodo(props) {
   }
   
   const handleInputChange = event => {
-    const { name, value } = event.target;
+    const { name, value } = event.target; //カラムと値を定義する
     setTodo({ ...todo, [name]: value }); //スプレッド構文で展開して、カラム名を指定して、そのvalueを更新する
   };
   const saveTodo = () => {
@@ -71,18 +71,18 @@ function AddTodo(props) {
       name: todo.name,
     };
 
-    axios.post('/api/v1/todos', data)
+    axios.post('/api/v1/todos', data) 
     .then(resp => {
       setTodo({
         id: resp.data.id,
         name: resp.data.name,
         is_completed: resp.data.is_completed
       });
-      notify();
-      props.history.push("/todos");
+      notify(); //フラッシュメッセージを表示する関数
+      props.history.push("/todos"); //リダイレクトを行いたいため
     })
     .catch(e => {
-      console.log(e)
+      console.log(e) // エラーが起きたら
     })
   };
   return (
