@@ -44,7 +44,7 @@ const Icon = styled.span`
 `
 //アイコンの設定
 
-toast.configure()
+toast.configure() //フラッシュメッセージを表示するための記述
 
 function AddTodo(props) {
   const initialTodoState = {
@@ -55,10 +55,10 @@ function AddTodo(props) {
 
   const [todo, setTodo] = useState(initialTodoState); //初期値に先ほどのinitialTodoStateを記述
 
-  const notify = () => {
-    toast.success('Todo successfully created!', {
-      position: 'bottom-center',
-      hideProgressBar: true
+  const notify = () => { //81行目で関数を使ったが定義していなかったので
+    toast.success('Todo successfully created!', { //表示させたい文字
+      position: 'bottom-center', //ポジションをデフォルトでは右上になっているが中央にする
+      hideProgressBar: true //デフォルトで出てくるバーを隠す
     })
   }
   
