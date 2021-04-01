@@ -90,15 +90,17 @@ function AddTodo(props) {
       <h1>New Todo</h1>
       <InputAndButton>
         <InputName
-          type="text"
-          required
+          type="text" 
+          required //?
           value={todo.name}
-          name="name"
-          onChange={handleInputChange}
+          name="name" //カラム名
+          onChange={handleInputChange} //?
         />
         <Button
-          onClick={saveTodo}
-          disabled={(!todo.name || /^\s*$/.test(todo.name))}
+          onClick={saveTodo} //クリックされた時に呼び出される
+          disabled={(!todo.name || /^\s*$/.test(todo.name))} //正規表現になる
+          //空の配列や空白の文字列を保存しないようにボタンを押せないようにしている
+          //^は行の始まりを表している。$は行の終わりを表している。\sは空白。*は繰り返しを表している。
         >
           <Icon>
             <FiSend />
